@@ -3,10 +3,10 @@ import React from "react";
 
 // Css
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../Style/NavBar.css";
+import "./Styles/NavBar.css";
 
 // Imagens
-import logo from "../../assests/logoRecipes100.jpg";
+import logo from "./assests/Logo/logoRecipes100.jpg";
 
 class NavBar extends React.Component {
   state = {
