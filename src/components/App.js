@@ -1,16 +1,16 @@
-import recipes from "../components/Receitas";
-console.log(recipes[0].imageUrl);
+import { BrowserRouter } from "react-router-dom";
+
+// importando componentes
+import NavBar from "./Home/NavBar";
+
 
 
 
 function App() {
   return (
-    <div>
-      <h1>hello word!</h1>
-      <img src={recipes[9].imageUrl} alt="nome do prato" />
-      <h1>{recipes[9].name}</h1>
-      <h1>{recipes[9].type}</h1>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+    </BrowserRouter>
   );
 }
 
