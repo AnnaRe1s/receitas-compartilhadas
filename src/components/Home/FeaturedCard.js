@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Styles/FeaturedCard.css";
 
+// imagem
 import alterar from "./assests/Chicken/FrangoAssado200.jpg";
-import { Link } from "react-router-dom";
+
 
 class FeaturedCard extends React.Component {
   state = {
@@ -23,6 +25,7 @@ class FeaturedCard extends React.Component {
 
   render() {
     return (
+
       <div className="feature">
         <div className="featureTitlesGeneral">
           <div className="featureTitles">
