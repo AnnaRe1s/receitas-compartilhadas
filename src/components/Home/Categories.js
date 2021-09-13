@@ -15,35 +15,35 @@ function Categories() {
       <div>
         <h1>Categorias</h1>
       </div>
-      <div className="scrolling-wrapper">
-        <div className="card">
-          <img src={meat} alt="acessar categoria carne" />
-          <p>Carne</p>
-        </div>
-        <div className="card">
-          <img src={chicken} alt="acessar categoria frango" />
-          <p>Frango</p>
-        </div>
-        <div className="card">
-          <img src={pig} alt="acessar categoria porco" />
-          <p>Porco</p>
-        </div>
-        <div className="card">
-          <img src={fish} alt="acessar categoria peixe" />
-          <p>Peixe</p>
-        </div>
-        <div className="card">
-          <img src={dessert} alt="acessar categoria sobremesas" />
-          <p>Sobremesas</p>
-        </div>
-        <div className="card">
-          <img src={pasta} alt="acessar categoria massas" />
-          <p>Massas</p>
-        </div>
-        <div className="card">
-          <img src={veggie} alt="acessar categoria vegetariano" />
-          <p>Vegetariano</p>
-        </div>
+      <div className="categoryList">
+          <div className="card">
+            <img src={meat} alt="acessar categoria carne" />
+            <p>Carne</p>
+          </div>
+          <div className="card">
+            <img src={chicken} alt="acessar categoria frango" />
+            <p>Frango</p>
+          </div>
+          <div className="card">
+            <img src={pig} alt="acessar categoria porco" />
+            <p>Porco</p>
+          </div>
+          <div className="card">
+            <img src={fish} alt="acessar categoria peixe" />
+            <p>Peixe</p>
+          </div>
+          <div className="card">
+            <img src={dessert} alt="acessar categoria sobremesas" />
+            <p>Sobremesas</p>
+          </div>
+          <div className="card">
+            <img src={pasta} alt="acessar categoria massas" />
+            <p>Massas</p>
+          </div>
+          <div className="card">
+            <img src={veggie} alt="acessar categoria vegetariano" />
+            <p>Vegetariano</p>
+          </div>
       </div>
     </div>
   );
