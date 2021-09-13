@@ -55,27 +55,6 @@ class FeaturedCard extends React.Component {
 
           <div className="featureCard">
             <div>
-              <Link to="/">
-                <img src={alterar} alt="colocar o nome da comida" />
-              </Link>
-            </div>
-            <div className="infoNameRecipe">
-              <h3>Nome da receita</h3>
-            </div>
-            <div className="infoGeneral">
-              <h4>Nome do usuario</h4>
-              <button onClick={this.clickLike}>
-                <i
-                  className={
-                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
-                  }
-                ></i>
-              </button>
-            </div>
-          </div>
-
-          <div className="featureCard">
-            <div>
               <Link to="/linkdareceita">
                 <img src={alterar} alt="colocar o nome da comida" />
               </Link>
@@ -116,13 +95,13 @@ class FeaturedCard extends React.Component {
             </div>
           </div>
 
-
           <div className="featureCard">
             <div>
               <Link to="/linkdareceita">
                 <img src={alterar} alt="colocar o nome da comida" />
               </Link>
             </div>
+
             <div className="infoNameRecipe">
               <h3>Nome da receita</h3>
             </div>
@@ -138,6 +117,27 @@ class FeaturedCard extends React.Component {
             </div>
           </div>
 
+          <div className="featureCard">
+            <div>
+              <Link to="/linkdareceita">
+                <img src={alterar} alt="colocar o nome da comida" />
+              </Link>
+            </div>
+
+            <div className="infoNameRecipe">
+              <h3>Nome da receita</h3>
+            </div>
+            <div className="infoGeneral">
+              <h4>Nome do usuario</h4>
+              <button onClick={this.clickLike}>
+                <i
+                  className={
+                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
+                  }
+                ></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -1,27 +1,80 @@
-.nav {
-  font-family: 'Quicksand', sans-serif;
+.barNav {
+  font-family: "Quicksand", sans-serif;
+  background-color: orange;
   box-shadow: 0 2px 5px rgb(133, 131, 131);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
 .container img {
-    width: 80px;
+  width: 80px;
 }
 
-.InputSearch {
+.buttonSearch {
   border: none;
-  border-bottom: 1px solid rgb(104, 103, 103);
-  margin-right: 2px;
-  padding-left: 10px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 5px rgb(172, 172, 172);
+  /* background-color: #ffa500; */
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 80%;
+  top: 2%;
 }
 
-.button {
+.buttonAdd {
+  border: 1px solid rgb(121, 120, 120);
+  box-shadow: 1px 1px 5px rgb(172, 172, 172);
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 80%;
+  top: 85%;
+  background-color: orange;
+  color: white;
   border: none;
-  background-color: white;
+}
+
+.buttonAdd p {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .buttonSearch {
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px rgb(172, 172, 172);
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 75%;
+    top: 2%;
+  }
+
+  .buttonAdd {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(121, 120, 120);
+    box-shadow: 1px 1px 5px rgb(172, 172, 172);
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    left: 80%;
+    top: 2%;
+    background-color: white;
+    color: orange;
+    border: none;
+  }
+
+  .buttonAdd i {
+    padding: 5px;
+  }
+
+  .buttonAdd p {
+    display: contents;
+    color: black;
+    padding: 5px;
+    margin: 0;
+  }
 }

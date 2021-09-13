@@ -36,12 +36,17 @@
 
 @media screen and (min-width: 600px) {
   .categories {
-    margin: 15px 400px;
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800;
   }
 
   .categoryList {
     overflow-x: hidden;
     overflow-y: hidden;
+    position: relative;
+    width: 800px;
   }
 }

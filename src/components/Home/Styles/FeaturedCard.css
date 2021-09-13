@@ -3,6 +3,7 @@
 }
 
 .featureTitlesGeneral {
+
   margin: 5px;
   padding: 5px;
 }
@@ -13,20 +14,11 @@
   font-weight: 300;
 }
 
-.featureCardGeneral {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    margin: 5px;
-    padding: 5px;
-
-}
 
 .featureCard {
-  margin: 20px;
-  display: inline-block;
   border: none;
+  box-shadow: 1px 1px 2px rgb(184, 184, 184);
+  margin: 10px;
   padding: 5px;
   margin-left: 10px;
 }
@@ -46,7 +38,7 @@
 }
 
 .infoGeneral h4 {
-    font-size: 14px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -57,11 +49,22 @@
   color: orange;
 }
 
-
 @media screen and (min-width: 600px) {
+  .featureTitlesGeneral {
+    text-align: center;
+  }
+
   .featureCardGeneral {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow:none;
+    background-color: white;
+    width: 800;
     overflow-x: hidden;
-    overflow-y: hidden;
   }
+
+
 }
