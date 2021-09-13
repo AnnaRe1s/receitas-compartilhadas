@@ -1,0 +1,27 @@
+.nav {
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 2px 5px rgb(133, 131, 131);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.container img {
+    width: 80px;
+}
+
+.InputSearch {
+  border: none;
+  border-bottom: 1px solid rgb(104, 103, 103);
+  margin-right: 2px;
+  padding-left: 10px;
+}
+
+.button {
+  border: none;
+  background-color: white;
+}
