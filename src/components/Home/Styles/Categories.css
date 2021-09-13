@@ -1,47 +1,52 @@
 .categories {
-    margin: 15px;
-    font-family: 'Quicksand', sans-serif;
+  margin: 15px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .categories h1 {
-    font-size: 24px;
+  text-align: center;
+  font-size: 24px;
 }
 
-.scrolling-wrapper {
-    margin: 5px;
-    padding: 5px;
+.categoryList {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  margin: 5px;
+  padding: 5px;
 }
 
 .card {
-    display: inline-block;
-    border: none;
-    padding: 5px;
-    margin-left: 10px;
-
-}  
+  display: inline-block;
+  border: none;
+  padding: 5px;
+  margin-left: 10px;
+}
 
 .card img {
-    width: 85px;
-    height: 70px;
-    border-radius: 15px;
+  width: 85px;
+  height: 70px;
+  border-radius: 15px;
 }
 
 .card p {
-    text-align: center;
+  text-align: center;
 }
-  
-@media only screen and (max-width: 600px) {
 
-    .scrolling-wrapper {
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    .card {
-        display: inline-block;
-        border: none;
-
-    } 
+@media screen and (min-width: 600px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800;
   }
+
+  .categoryList {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    width: 800px;
+  }
+}

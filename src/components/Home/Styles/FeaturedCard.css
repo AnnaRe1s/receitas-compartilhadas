@@ -1,0 +1,70 @@
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.featureTitlesGeneral {
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.featureTitles p {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+.featureCard {
+  border: none;
+  box-shadow: 1px 1px 2px rgb(184, 184, 184);
+  margin: 10px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.featureCard img {
+  width: 100%;
+}
+
+.infoNameRecipe {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.infoGeneral {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoGeneral h4 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.infoGeneral button {
+  margin-right: 15px;
+  border: none;
+  background-color: white;
+  color: orange;
+}
+
+@media screen and (min-width: 600px) {
+  .featureTitlesGeneral {
+    text-align: center;
+  }
+
+  .featureCardGeneral {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow:none;
+    background-color: white;
+    width: 800;
+    overflow-x: hidden;
+  }
+
+
+}
