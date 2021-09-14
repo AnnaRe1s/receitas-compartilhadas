@@ -1,12 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 
+import TextInput from '../Textinput/TextInput';
+
 class AddRecipes extends React.Component {
     state = {
         name: '',
         type: '',
         imageUrl: '',
-        preparationTime: '',
+        preparation_time: '',
         portions: '',
         level: '',
         likes: '',
@@ -21,7 +23,7 @@ class AddRecipes extends React.Component {
             .post('https://ironrest.herokuapp.com/recipes', { ...this.state })
             .then(response => {
                 console.log(response);
-                this.props.history.push('/all-beers');
+                this.props.history.push('/');
             })
             .catch(err => console.log(err));
     };
@@ -56,7 +58,7 @@ class AddRecipes extends React.Component {
                         <label>Tempo de preparo da receita</label>
                         <input
                             className="form-control"
-                            value={this.state.preparationTime}
+                            value={this.state.preparation_time}
                             name="preparationTime"
                             onChange={this.handleChange}
                         />

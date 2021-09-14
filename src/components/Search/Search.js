@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
 
 class Search extends React.Component {
-
-    render (){
+    render() {
         return (
             <div>
-            <h1>aba de pesquisa</h1>
+                <h1>aba de pesquisa</h1>
             </div>
-        )
+        );
     }
-
 }
 
 export default Search;
