@@ -1,31 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "./Styles/FeaturedCard.css";
-
-// imagem
-import alterar from "./assests/Chicken/FrangoAssado200.jpg";
-
 
 class FeaturedCard extends React.Component {
   state = {
-    isClicked: false,
+    recipes: [],
   };
 
-  clickLike = () => {
-    if (this.state.isClicked) {
-      this.setState({ isClicked: false });
-    } else {
-      this.setState({ isClicked: true });
-    }
+  componentDidMount = async () => {
+    this.getObjs();
   };
 
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+  getObjs = async () => {
+    const response = await axios.get("https://ironrest.herokuapp.com/recipes");
+
+    // pegando todos os objetos completos
+    const objs = response.data;
+
+    this.setState({ recipes: [...objs] });
   };
 
   render() {
+    console.log("verificando state", this.state.recipes);
     return (
-
       <div className="feature">
         <div className="featureTitlesGeneral">
           <div className="featureTitles">
@@ -33,114 +31,31 @@ class FeaturedCard extends React.Component {
             <p>As receitas mais curtidas da comunidade</p>
           </div>
         </div>
-
         <div className="featureCardGeneral">
-          <div className="featureCard">
-            <div>
-              <Link to="/linkdareceita">
-                <img src={alterar} alt="colocar o nome da comida" />
-              </Link>
-            </div>
-            <div className="infoNameRecipe">
-              <h3>Nome da receita</h3>
-            </div>
-            <div className="infoGeneral">
-              <h4>Nome do usuario</h4>
-              <button onClick={this.clickLike}>
-                <i
-                  className={
-                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
-                  }
-                ></i>
-              </button>
-            </div>
-          </div>
-
-          <div className="featureCard">
-            <div>
-              <Link to="/linkdareceita">
-                <img src={alterar} alt="colocar o nome da comida" />
-              </Link>
-            </div>
-            <div className="infoNameRecipe">
-              <h3>Nome da receita</h3>
-            </div>
-            <div className="infoGeneral">
-              <h4>Nome do usuario</h4>
-              <button onClick={this.clickLike}>
-                <i
-                  className={
-                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
-                  }
-                ></i>
-              </button>
-            </div>
-          </div>
-
-          <div className="featureCard">
-            <div>
-              <Link to="/linkdareceita">
-                <img src={alterar} alt="colocar o nome da comida" />
-              </Link>
-            </div>
-            <div className="infoNameRecipe">
-              <h3>Nome da receita</h3>
-            </div>
-            <div className="infoGeneral">
-              <h4>Nome do usuario</h4>
-              <button onClick={this.clickLike}>
-                <i
-                  className={
-                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
-                  }
-                ></i>
-              </button>
-            </div>
-          </div>
-
-          <div className="featureCard">
-            <div>
-              <Link to="/linkdareceita">
-                <img src={alterar} alt="colocar o nome da comida" />
-              </Link>
-            </div>
-
-            <div className="infoNameRecipe">
-              <h3>Nome da receita</h3>
-            </div>
-            <div className="infoGeneral">
-              <h4>Nome do usuario</h4>
-              <button onClick={this.clickLike}>
-                <i
-                  className={
-                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
-                  }
-                ></i>
-              </button>
-            </div>
-          </div>
-
-          <div className="featureCard">
-            <div>
-              <Link to="/linkdareceita">
-                <img src={alterar} alt="colocar o nome da comida" />
-              </Link>
-            </div>
-
-            <div className="infoNameRecipe">
-              <h3>Nome da receita</h3>
-            </div>
-            <div className="infoGeneral">
-              <h4>Nome do usuario</h4>
-              <button onClick={this.clickLike}>
-                <i
-                  className={
-                    this.state.isClicked ? "fas fa-heart" : "far fa-heart"
-                  }
-                ></i>
-              </button>
-            </div>
-          </div>
+          {this.state.recipes.map((element) => {
+            return (
+              <div className="featureCard">
+                <div>
+                  <Link to="/linkdareceita">
+                    <img src={element.imageUrl} alt={element.name} />
+                  </Link>
+                </div>
+                <div className="infoNameRecipe">
+                  <h3>{element.name}</h3>
+                </div>
+                <div className="information">
+                  <div className="infoGeneral">
+                    <h4>Porções:</h4>
+                    <h4>{element.portions}</h4>
+                  </div>
+                  <div className="infoGeneral">
+                    <h4>Tempo:</h4>
+                    <h4>{element.preparation_time}</h4>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );

@@ -1,0 +1,42 @@
+/* nav */
+
+.barSearch {
+  display: flex;
+  align-items: center;
+}
+
+.barSearch h1 {
+  position: relative;
+  left: 20%;
+}
+
+.previus {
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  margin: 15px;
+}
+
+
+@media screen and (min-width: 600px) {
+  .barSearch h1 {
+    position: relative;
+    left: 45%;
+  }
+
+  .previus {
+    border: 1px solid white;
+    background-color: orange;
+    color: white;
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    margin: 15px;
+    margin-left: 135%;
+  }
+  
+
+}

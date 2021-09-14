@@ -15,8 +15,8 @@
   /* background-color: #ffa500; */
   width: 50px;
   height: 50px;
-  position: fixed;
-  left: 80%;
+  position: relative;
+  left: 60%;
   top: 2%;
 }
 
@@ -46,22 +46,19 @@
     background-color: white;
     width: 50px;
     height: 50px;
-    position: fixed;
-    left: 75%;
+    left: 73%;
     top: 2%;
   }
 
   .buttonAdd {
-    display: flex;
-    align-items: center;
     border: 1px solid rgb(121, 120, 120);
     box-shadow: 1px 1px 5px rgb(172, 172, 172);
     border-radius: 30px;
     width: 200px;
     height: 50px;
-    position: fixed;
     left: 80%;
     top: 2%;
+    position: fixed;
     background-color: white;
     color: orange;
     border: none;
