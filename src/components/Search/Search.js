@@ -11,7 +11,7 @@ class Search extends React.Component {
   };
   // componentDidUpdate(prevProps, prevState) {
   //   if (this.state.input !== prevState.input) {
-  //     this.props.(this.state.input);
+  //     this.state.(this.state.input);
   //   }
   // }
 
@@ -25,14 +25,18 @@ class Search extends React.Component {
     this.setState({ recipes: [...obj] });
   };
 
+  filterFood = () => {
+    return this.state.recipes.filter((el) =>
+      el.name.toLowerCase().includes(this.state.input.toLowerCase())
+    );
+  };
+
   handleSearch = (event) => {
     const { value } = event.target;
     this.setState({ input: value });
   };
 
   render() {
-    console.log(this.state.input);
-
     return (
       <div>
         <div className="barSearch">
@@ -65,7 +69,7 @@ class Search extends React.Component {
           </button>
         </div>
         <div>
-          {this.state.recipes.map((element) => {
+          {this.filterFood().map((element) => {
             return (
               <Link to={`/${element._id}`} style={{ textDecoration: "none" }}>
                 <div className="container">
