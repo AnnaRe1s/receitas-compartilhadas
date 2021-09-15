@@ -48,7 +48,7 @@ class ReciverDetail extends Component {
           </div>
           {/* link para editar receita */}
           <div>
-            <Link>
+            <Link to={`/receita/Update/${this.state._id}`}>
               <button className="editRecipe">
                 <i className="fas fa-edit"></i>
               </button>
