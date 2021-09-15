@@ -3,7 +3,6 @@
 }
 
 .featureTitlesGeneral {
-
   margin: 5px;
   padding: 5px;
 }
@@ -13,7 +12,6 @@
   font-size: 12px;
   font-weight: 300;
 }
-
 
 .featureCard {
   border: none;
@@ -34,12 +32,13 @@
 
 .infoGeneral {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .infoGeneral h4 {
   font-size: 14px;
   font-weight: 300;
+  padding-right: 5px;
 }
 
 .infoGeneral button {
@@ -50,20 +49,51 @@
 }
 
 @media screen and (min-width: 600px) {
+  .featureTitles p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   .featureTitlesGeneral {
     text-align: center;
   }
 
   .featureCardGeneral {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: stretch;
     border: none;
-    box-shadow:none;
+    box-shadow: none;
     background-color: white;
     width: 800;
     overflow-x: hidden;
+  }
+
+  .featureCard {
+    border: none;
+    box-shadow: 1px 1px 2px rgb(184, 184, 184);
+    margin: 10px;
+    padding: 5px;
+    margin-left: 10px;
+    width: 20%;
+  }
+
+  .featureCard img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .infoNameRecipe h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    
   }
 
 

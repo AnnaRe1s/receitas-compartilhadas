@@ -1,3 +1,6 @@
+
+
+
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -12,8 +15,8 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="barNav">
-          <div className="container">
+        <nav className="bar">
+          <div className="containerNav">
             <Link to="/">
               <img src={logo} alt="Logo do app" />
             </Link>
@@ -23,7 +26,7 @@ class NavBar extends React.Component {
               </button>
             </Link>
             <Link to="addRecipes">
-              <button className="buttonAdd"><i class="fas fa-plus"></i> <p>Adicione sua receita</p></button>
+              <button className="buttonAdd"><i className="fas fa-plus"></i> <p>Adicione sua receita</p></button>
             </Link>
           </div>
         </nav>

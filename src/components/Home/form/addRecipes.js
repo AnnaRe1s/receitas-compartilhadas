@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import RecipeForm from './RecipeForm';
 
 class AddRecipes extends React.Component {
     state = {
@@ -9,7 +10,6 @@ class AddRecipes extends React.Component {
         preparation_time: '',
         portions: '',
         level: '',
-        likes: '',
         ingredients: [],
         preparationMethod: '',
     };
@@ -21,7 +21,7 @@ class AddRecipes extends React.Component {
             .post('https://ironrest.herokuapp.com/recipes', { ...this.state })
             .then(response => {
                 console.log(response);
-                this.props.history.push('/');
+                this.props.history.push('/home');
             })
             .catch(err => console.log(err));
     };
@@ -56,7 +56,7 @@ class AddRecipes extends React.Component {
                         <label>Tempo de preparo da receita</label>
                         <input
                             className="form-control"
-                            value={this.state.preparation_time}
+                            value={this.state.preparationTime}
                             name="preparationTime"
                             onChange={this.handleChange}
                         />
