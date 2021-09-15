@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import TextInput from '../Textinput/TextInput';
-
 class AddRecipes extends React.Component {
     state = {
         name: '',
