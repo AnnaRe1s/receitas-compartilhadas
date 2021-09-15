@@ -15,8 +15,8 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="barNav">
-          <div className="container">
+        <nav className="bar">
+          <div className="containerNav">
             <Link to="/">
               <img src={logo} alt="Logo do app" />
             </Link>
