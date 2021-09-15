@@ -15,8 +15,8 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="barNav">
-          <div className="container">
+        <nav className="bar">
+          <div className="containerNav">
             <Link to="/">
               <img src={logo} alt="Logo do app" />
             </Link>
@@ -25,7 +25,7 @@ class NavBar extends React.Component {
                 <i class="fas fa-search"></i>
               </button>
             </Link>
-            <Link to="addRecipes">
+            <Link to="/addRecipes">
               <button className="buttonAdd"><i className="fas fa-plus"></i> <p>Adicione sua receita</p></button>
             </Link>
           </div>

@@ -11,7 +11,7 @@ class Search extends React.Component {
   };
   // componentDidUpdate(prevProps, prevState) {
   //   if (this.state.input !== prevState.input) {
-  //     this.props.(this.state.input);
+  //     this.state.(this.state.input);
   //   }
   // }
 
@@ -25,20 +25,24 @@ class Search extends React.Component {
     this.setState({ recipes: [...obj] });
   };
 
+  filterFood = () => {
+    return this.state.recipes.filter((el) =>
+      el.name.toLowerCase().includes(this.state.input.toLowerCase())
+    );
+  };
+
   handleSearch = (event) => {
     const { value } = event.target;
     this.setState({ input: value });
   };
 
   render() {
-    console.log(this.state.input);
-
     return (
       <div>
         <div className="barSearch">
           <Link to="/">
             <button className="previus">
-              <i class="fas fa-chevron-left"></i>
+              <i className="fas fa-chevron-left"></i>
             </button>
           </Link>
           <h1>Pesquisa</h1>
@@ -65,9 +69,9 @@ class Search extends React.Component {
           </button>
         </div>
         <div>
-          {this.state.recipes.map((element) => {
+          {this.filterFood().map((element) => {
             return (
-              <Link to={`/${element._id}`} style={{ textDecoration: "none" }}>
+              <Link to={`/receitas/${element._id}`} style={{ textDecoration: "none" }}>
                 <div className="container">
                   <img src={element.imageUrl} alt={element.name} />
                   <h4>{element.name}</h4>

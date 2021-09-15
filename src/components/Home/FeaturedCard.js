@@ -22,7 +22,7 @@ class FeaturedCard extends React.Component {
   };
 
   render() {
-    console.log("verificando state", this.state.recipes);
+
     return (
       <div className="feature">
         <div className="featureTitlesGeneral">
@@ -36,7 +36,7 @@ class FeaturedCard extends React.Component {
             return (
               <div className="featureCard">
                 <div>
-                  <Link to="/linkdareceita">
+                  <Link to={`/receitas/${element._id}`}>
                     <img src={element.imageUrl} alt={element.name} />
                   </Link>
                 </div>

@@ -1,0 +1,152 @@
+.browserNav {
+  display: none;
+}
+
+.mobileNav {
+  display: content;
+}
+
+.imageRecipe img {
+  width: 100%;
+}
+
+.backHome {
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  margin: 15px;
+  position: absolute;
+}
+
+.editRecipe {
+  border: none;
+  background-color: rgba(255, 166, 0, 0);
+  color: white;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  margin: 15px;
+  position: absolute;
+  left: 78%;
+}
+
+.delete {
+  border: none;
+  background-color: rgba(255, 166, 0, 0);
+  color: white;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  margin: 15px;
+  position: absolute;
+  left: 85%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+.boxInformation {
+  border: 0.5px solid rgb(201, 201, 201);
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.nameRecipe h1 {
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 0.05px solid rgb(201, 201, 201);
+}
+
+.boxInfoRecipe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.infoRecipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 7px;
+}
+
+.infoRecipe h3 {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.infoRecipe i {
+  text-align: center;
+  color: orange;
+}
+
+.ingredients {
+  border: 0.5px solid rgb(201, 201, 201);
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.ingredients h2 {
+  color: orange;
+}
+
+.ingredients li {
+  font-weight: 300;
+}
+
+.method {
+  border: 0.5px solid rgb(201, 201, 201);
+  background-color: white;
+  box-shadow: 1px 1px 4px rgb(214, 214, 214);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.method h2 {
+  color: orange;
+}
+
+.method li {
+  font-weight: 300;
+}
+
+
+@media screen and (min-width: 600px) {
+  .browserNav {
+    display: contents;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  .imageRecipe img {
+    width: 30%;
+    margin: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    margin: 0 80px;
+  }
+}
