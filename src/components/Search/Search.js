@@ -42,7 +42,7 @@ class Search extends React.Component {
         <div className="barSearch">
           <Link to="/">
             <button className="previus">
-              <i class="fas fa-chevron-left"></i>
+              <i className="fas fa-chevron-left"></i>
             </button>
           </Link>
           <h1>Pesquisa</h1>
@@ -71,7 +71,7 @@ class Search extends React.Component {
         <div>
           {this.filterFood().map((element) => {
             return (
-              <Link to={`/${element._id}`} style={{ textDecoration: "none" }}>
+              <Link to={`/receitas/${element._id}`} style={{ textDecoration: "none" }}>
                 <div className="container">
                   <img src={element.imageUrl} alt={element.name} />
                   <h4>{element.name}</h4>

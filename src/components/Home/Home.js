@@ -69,7 +69,7 @@ class Home extends React.Component {
       <div>
         <NavBar />
         <Categories />
-        <FeaturedCard/>
+        <FeaturedCard />
       </div>
     );
   }

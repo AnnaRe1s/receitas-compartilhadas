@@ -1,15 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 
+
 class AddRecipes extends React.Component {
     state = {
         name: '',
         type: '',
         imageUrl: '',
-        preparationTime: '',
+        preparation_time: '',
         portions: '',
         level: '',
-        likes: '',
         ingredients: [],
         preparationMethod: '',
     };
