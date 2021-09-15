@@ -5,17 +5,20 @@ function TextInput(props) {
                 {props.label}
             </label>
             <input
-                type={props.type}
-                className="form-control"
-                id={props.id}
                 name={props.name}
+                className="form-control"
+                type={props.type}
+                imageUrl={props.imageUrl}
+                preparation_time={props.preparation_time}
+                portions={props.portions}
+                level={props.level}
+                ingredients={props.ingredients}
+                preparationMethod={props.preparationMethod}
+                id={props.id}
                 onChange={props.onChange}
-                value={props.value}
-                required={props.required}
             />
             {props.hint ? <div className="form-text">{props.hint}</div> : null}
         </div>
     );
 }
-
 export default TextInput;

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-class AddRecipes extends React.Component {
+class EditRecipes extends React.Component {
   state = {
     name: "",
     type: "",
@@ -12,29 +12,50 @@ class AddRecipes extends React.Component {
     ingredients: [],
     preparationMethod: [],
   };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const obj = { ...this.state };
-    obj["ingredients"] = obj["ingredients"].split("\n");
-    obj["preparationMethod"] = obj["preparationMethod"].split("\n");
+  componentDidMount = () => {
     axios
-      .post("https://ironrest.herokuapp.com/recipes", obj)
+      .get(
+        `https://ironrest.herokuapp.com/recipes/${this.props.match.params._id}`
+      )
       .then((response) => {
-        console.log(response);
-        this.props.history.push("/");
+        this.setState({ ...response.data });
+        console.log("edicao resposta:", response);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   };
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+  handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      // retirando o id
+      const obj = { ...this.state };
+      delete obj["_id"];
+      // Transformando \n em ,""
+      obj["ingredients"] = obj["ingredients"].split("\n")
+      obj["preparationMethod"] = obj["preparationMethod"].split("\n")
+
+      const response = await axios.put(
+        `https://ironrest.herokuapp.com/recipes/${this.props.match.params._id}`,
+        obj
+      );
+      console.log("response:", response);
+
+      this.props.history.push("/");
+    } catch (err) {
+      console.error(err);
+    }
+  };
   render() {
+
     return (
       <div className="mt-5 text-left w-100 d-flex justify-content-center">
-        <form onSubmit={this.handleSubmit} className="col-6">
+        <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label>Nome da nova receita</label>
+            <label>Nome da receita</label>
             <input
               className="form-control"
               value={this.state.name}
@@ -42,7 +63,6 @@ class AddRecipes extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-
           <div className="form-group">
             <label>Categoria </label>
             <select
@@ -59,7 +79,6 @@ class AddRecipes extends React.Component {
               <option value="Vegetariano">Vegetariano</option>
             </select>
           </div>
-
           <div className="form-group">
             <label>Tempo de preparo da receita</label>
             <input
@@ -69,7 +88,6 @@ class AddRecipes extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-
           <div className="form-group">
             <label>Quantas porções essa receita serve</label>
             <input
@@ -79,7 +97,6 @@ class AddRecipes extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-
           <div className="form-group">
             <label>ingredients</label>
             <textarea
@@ -87,9 +104,10 @@ class AddRecipes extends React.Component {
               value={this.state.ingredients}
               name="ingredients"
               onChange={this.handleChange}
-            ></textarea>
+            >
+              {" "}
+            </textarea>
           </div>
-
           <div className="form-group">
             <label>Metodo de preparo</label>
             <textarea
@@ -99,10 +117,8 @@ class AddRecipes extends React.Component {
               onChange={this.handleChange}
             ></textarea>
           </div>
-
           <div className="form-group">
             <label>Dificuldade de preparo</label>
-
             <select
               value={this.state.level}
               onChange={this.handleChange}
@@ -113,7 +129,6 @@ class AddRecipes extends React.Component {
               <option value="Dificil">Difícil</option>
             </select>
           </div>
-
           <div className="form-group">
             <label>URL da imagem da receita</label>
             <textarea
@@ -123,10 +138,9 @@ class AddRecipes extends React.Component {
               onChange={this.handleChange}
             ></textarea>
           </div>
-
           <div className="form-group">
             <button className="btn btn-primary" type="submit">
-              Enviar
+              Alterar receita
             </button>
           </div>
         </form>
@@ -134,5 +148,4 @@ class AddRecipes extends React.Component {
     );
   }
 }
-
-export default AddRecipes;
+export default EditRecipes;

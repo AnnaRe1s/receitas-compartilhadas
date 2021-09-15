@@ -5,7 +5,7 @@ class RemoveReciver extends React.Component {
     componentDidMount = () => {
         axios
             .delete(
-                `https://ironrest.herokuapp.com/recipes${this.props.match.params.id}`
+                `https://ironrest.herokuapp.com/recipes/${this.props.match.params._id}`
             )
             .then(response => {
                 console.log(response);
