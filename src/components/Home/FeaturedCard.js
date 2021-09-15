@@ -22,6 +22,7 @@ class FeaturedCard extends React.Component {
   };
 
   render() {
+
     return (
       <div className="feature">
         <div className="featureTitlesGeneral">
