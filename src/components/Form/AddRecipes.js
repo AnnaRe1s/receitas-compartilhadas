@@ -13,7 +13,7 @@ class AddRecipes extends React.Component {
     imageUrl: "",
     preparation_time: "",
     portions: "",
-    level: "",
+    level: "facil",
     ingredients: [],
     preparationMethod: [],
   };
