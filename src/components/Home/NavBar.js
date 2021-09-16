@@ -1,6 +1,3 @@
-
-
-
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -9,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Styles/NavBar.css";
 
 // Imagens
-import logo from "./assests/Logo/logoRecipesOrange100.jpg";
+import logo from "./assests/Logo/Logotipo hungry.png";
 
 class NavBar extends React.Component {
   render() {
@@ -26,7 +23,9 @@ class NavBar extends React.Component {
               </button>
             </Link>
             <Link to="/addRecipes">
-              <button className="buttonAdd"><i className="fas fa-plus"></i> <p>Adicione sua receita</p></button>
+              <button className="buttonAdd">
+                <i className="fas fa-plus"></i> <p>Adicione sua receita</p>
+              </button>
             </Link>
           </div>
         </nav>
