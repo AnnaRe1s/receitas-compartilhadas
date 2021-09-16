@@ -1,6 +1,6 @@
 # Receitas Compartilhadas
 
-<img src="/src/components/Home/assests/ImagemReadme/readme gif.gif" width="40" height="40" />
+[](https://hungry-share-your-recipe.netlify.app/)
 
 # Sobre o App
 
