@@ -12,10 +12,6 @@ import { Link } from "react-router-dom";
 
 function Categories() {
 
-
-
-
-  
   return (
     <div className="categories">
       <div>
@@ -23,43 +19,43 @@ function Categories() {
       </div>
       <div className="categoryList">
         <div className="card">
-          <Link to={`/category/type`}>
+          <Link to={`/category/carne`}>
             <img src={meat} alt="acessar categoria carne" />
           </Link>
           <p>Carne</p>
         </div>
         <div className="card">
-          <Link to="chicken">
+          <Link to="/category/frango">
             <img src={chicken} alt="acessar categoria frango" />{" "}
           </Link>
           <p>Frango</p>
         </div>
         <div className="card">
-          <Link to="/pig">
+          <Link to="/category/porco">
             <img src={pig} alt="acessar categoria porco" />{" "}
           </Link>
           <p>Porco</p>
         </div>
         <div className="card">
-          <Link to="/fish">
+          <Link to="/category/peixe">
             <img src={fish} alt="acessar categoria peixe"/>{" "}
           </Link>
           <p>Peixe</p>
         </div>
         <div className="card">
-          <Link to="/dessert">
+          <Link to="/category/sobremesa">
             <img src={dessert} alt="acessar categoria sobremesas"/>{" "}
           </Link>
           <p>Sobremesas</p>
         </div>
         <div className="card">
-          <Link to="/pasta">
+          <Link to="/category/massas">
             <img src={pasta} alt="acessar categoria massas"/>{" "}
           </Link>
           <p>Massas</p>
         </div>
         <div className="card">
-          <Link to="/veggie">
+          <Link to="/category/vegetariano">
             <img src={veggie} alt="acessar categoria vegetariano" />{" "}
           </Link>
           <p>Vegetariano</p>

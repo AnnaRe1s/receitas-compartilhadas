@@ -27,7 +27,7 @@ class FeaturedCard extends React.Component {
       <div className="feature">
         <div className="featureTitlesGeneral">
           <div className="featureTitles">
-            <h1>Receitas em destaque</h1>
+            <h1>Receitas </h1>
             <p>As receitas mais curtidas da comunidade</p>
           </div>
         </div>
