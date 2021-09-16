@@ -1,6 +1,6 @@
 # Receitas Compartilhadas
 
-<img src="/src/components/Home/assests/ImagemReadme/readme gif.mp4">
+<img src="/src/components/Home/assests/ImagemReadme/readme gif.gif" width="40" height="40" />
 
 # Sobre o App
 
