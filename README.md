@@ -1,6 +1,6 @@
 # Receitas Compartilhadas
 
-[](https://hungry-share-your-recipe.netlify.app/)
+[GIF](https://drive.google.com/file/d/1wv_yoti4fGZrr8qwKSfYDKQzhwcOQmKO/view?usp=sharing)
 
 # Sobre o App
 
