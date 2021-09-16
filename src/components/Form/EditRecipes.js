@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
+import Nav from "../Home/NavBar"
 
 class EditRecipes extends React.Component {
   state = {
@@ -52,18 +55,28 @@ class EditRecipes extends React.Component {
   render() {
 
     return (
-      <div className="mt-5 text-left w-100 d-flex justify-content-center">
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+      <div >
+        <form className="form" onSubmit={this.handleSubmit}>
+        <div className="browserNav">
+            <Nav />
+          </div>
+          <div className="titleBar">
+            <Link to="/">
+              <button className="previus">
+                <i className="fas fa-chevron-left"></i>
+              </button>
+            </Link>
+            <h1>   Edite sua receita!</h1>
+          </div>
+          <div className="labelInput">
             <label>Nome da receita</label>
             <input
-              className="form-control"
               value={this.state.name}
               name="name"
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>Categoria </label>
             <select
               value={this.state.type}
@@ -79,28 +92,25 @@ class EditRecipes extends React.Component {
               <option value="Vegetariano">Vegetariano</option>
             </select>
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>Tempo de preparo da receita</label>
             <input
-              className="form-control"
               value={this.state.preparation_time}
               name="preparation_time"
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>Quantas porções essa receita serve</label>
             <input
-              className="form-control"
               value={this.state.portions}
               name="portions"
               onChange={this.handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>ingredients</label>
             <textarea
-              className="form-control"
               value={this.state.ingredients}
               name="ingredients"
               onChange={this.handleChange}
@@ -108,16 +118,15 @@ class EditRecipes extends React.Component {
               {" "}
             </textarea>
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>Metodo de preparo</label>
             <textarea
-              className="form-control"
               value={this.state.preparationMethod}
               name="preparationMethod"
               onChange={this.handleChange}
             ></textarea>
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>Dificuldade de preparo</label>
             <select
               value={this.state.level}
@@ -129,17 +138,16 @@ class EditRecipes extends React.Component {
               <option value="Dificil">Difícil</option>
             </select>
           </div>
-          <div className="form-group">
+          <div className="labelInput">
             <label>URL da imagem da receita</label>
             <textarea
-              className="form-control"
               name="imageUrl"
               value={this.state.imageUrl}
               onChange={this.handleChange}
             ></textarea>
           </div>
-          <div className="form-group">
-            <button className="btn btn-primary" type="submit">
+          <div className="labelInput">
+            <button type="submit">
               Alterar receita
             </button>
           </div>

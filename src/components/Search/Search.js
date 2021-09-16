@@ -9,11 +9,6 @@ class Search extends React.Component {
     recipes: [],
     input: "",
   };
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.input !== prevState.input) {
-  //     this.state.(this.state.input);
-  //   }
-  // }
 
   componentDidMount = () => {
     this.getApi();

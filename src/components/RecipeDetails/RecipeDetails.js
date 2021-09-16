@@ -103,7 +103,8 @@ class ReciverDetail extends Component {
             <h2>Modo de preparo</h2>
             <ol>
               {this.state.preparationMethod.map((metodo) => {
-                return <li>{metodo}</li>;
+                return <li>{metodo}</li>
+                ;
               })}
             </ol>
           </div>
