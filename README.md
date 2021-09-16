@@ -21,7 +21,7 @@ A parte visual desse aplicativo foi inspirado em um projeto de UI Design do Haru
 
 # Compartilhe sua receita com a comunidade
 
-[Link do do App](https://hungry-share-your-recipe.netlify.app/receitas/6140fdd4a20f960017e6dff4)
+[Link do do App](https://hungry-share-your-recipe.netlify.app/)
 
 
 # Saiba mais sobre o projeto 
