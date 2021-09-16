@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 // importando componentes
 import NavBar from './NavBar';
@@ -85,6 +86,21 @@ class Home extends React.Component {
     );
   }
 >>>>>>> 5c5367bb239731eb9ab67829b1eafe30ce3e9722
+=======
+// importando componentes
+import NavBar from "./NavBar";
+// import Categories from "./Categories";
+import FeaturedCard from "./FeaturedCard";
+
+function Home() {
+  return (
+    <div>
+      <NavBar />
+      {/* <Categories /> */}
+      <FeaturedCard />
+    </div>
+  );
+>>>>>>> 62f62c62a61fffd821621db7c5e16fd98c5ba854
 }
 
 export default Home;

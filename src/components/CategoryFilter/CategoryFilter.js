@@ -2,16 +2,22 @@ import React from "react";
 import axios from "axios";
 
 class CategoyFilter extends React.Component {
-  state = {};
+  state = {
 
+    meat: []
+
+
+  };
 
   getObjs = async () => {
     const response = await axios.get("https://ironrest.herokuapp.com/recipes");
 
-    const types = response.data;
-    console.log(`type`,types)
+    const recipes = response.data;
+    console.log(`recipes`,recipes)
 
-    // this.setState({ recipes: [...objs] });
+   
+
+
   };
 
   render() {

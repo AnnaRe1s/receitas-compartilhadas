@@ -1,0 +1,73 @@
+.titleBar {
+  display: flex;
+  align-items: center;
+}
+
+.titleBar h1 {
+  font-size: 24px;
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.labelInput label {
+  padding-left: 10px;
+}
+
+.labelInput input {
+  border: 0.05px solid rgb(207, 207, 207);
+  border-radius: 15px;
+  height: 35px;
+  padding: 10px;
+}
+
+.labelInput select {
+  border: 0.05px solid rgb(207, 207, 207);
+  border-radius: 15px;
+  height: 35px;
+  padding: 8px;
+}
+
+.labelInput textarea {
+  border: 0.05px solid rgb(207, 207, 207);
+  height: 90px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.labelInput button {
+  border: none;
+  border-radius: 15px;
+  background-color: orange;
+  color: white;
+  font-weight: 700;
+  height: 40px;
+  padding: 8px;
+}
+
+@media screen and (min-width: 600px) {
+
+    .titleBar {
+        display: none;
+    }
+
+    .labelInput {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 150px;
+      }
+
+      .labelInput button {
+        border: none;
+        border-radius: 15px;
+        background-color: orange;
+        color: white;
+        font-weight: 700;
+        height: 40px;
+        padding: 8px;
+      }
+
+}

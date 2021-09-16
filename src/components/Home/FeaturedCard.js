@@ -23,23 +23,13 @@ class FeaturedCard extends React.Component {
         this.setState({ recipes: [...objs] });
     };
 
-<<<<<<< HEAD
-    render() {
-        return (
-            <div className="feature">
-                <div className="featureTitlesGeneral">
-                    <div className="featureTitles">
-                        <h1>Receitas em destaque</h1>
-                        <p>As receitas mais curtidas da comunidade</p>
-                    </div>
-=======
   render() {
 
     return (
       <div className="feature">
         <div className="featureTitlesGeneral">
           <div className="featureTitles">
-            <h1>Receitas em destaque</h1>
+            <h1>Receitas</h1>
             <p>As receitas mais curtidas da comunidade</p>
           </div>
         </div>
@@ -51,7 +41,6 @@ class FeaturedCard extends React.Component {
                   <Link to={`/receitas/${element._id}`}>
                     <img src={element.imageUrl} alt={element.name} />
                   </Link>
->>>>>>> 5c5367bb239731eb9ab67829b1eafe30ce3e9722
                 </div>
                 <div className="featureCardGeneral">
                     {this.state.recipes.map(element => {

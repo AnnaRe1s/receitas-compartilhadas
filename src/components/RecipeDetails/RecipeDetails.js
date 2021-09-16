@@ -56,7 +56,7 @@ class ReciverDetail extends Component {
           </div>
           {/* link para deletar receita */}
           <div>
-            <Link>
+            <Link to={`/delete/${this.state._id}`}>
               <button className="delete">
                 <i class="far fa-trash-alt"></i>
               </button>
@@ -103,7 +103,8 @@ class ReciverDetail extends Component {
             <h2>Modo de preparo</h2>
             <ol>
               {this.state.preparationMethod.map((metodo) => {
-                return <li>{metodo}</li>;
+                return <li>{metodo}</li>
+                ;
               })}
             </ol>
           </div>

@@ -28,6 +28,7 @@ import addRecipes from "./Form/AddRecipes";
 import ReciverDetails from "./RecipeDetails/RecipeDetails";
 import CategoryFilter from "./CategoryFilter/CategoryFilter";
 import EditRecipes from "./Form/EditRecipes";
+import RemoveReciver from "./Form/Remove.Recive";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <Route exact path="/receitas/:_id" component={ReciverDetails} />
       <Route exact path="/category/:type" component={CategoryFilter} />
       <Route exact path="/receita/Update/:_id" component={EditRecipes} />
+      <Route exact path="/delete/:_id" component={RemoveReciver}/>
     </BrowserRouter>
   );
 >>>>>>> 5c5367bb239731eb9ab67829b1eafe30ce3e9722
