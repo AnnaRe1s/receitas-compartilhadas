@@ -64,6 +64,7 @@ class Home extends React.Component {
     //   });
     // };
 
+<<<<<<< HEAD
     render() {
         return (
             <div>
@@ -73,6 +74,17 @@ class Home extends React.Component {
             </div>
         );
     }
+=======
+  render() {
+    return (
+      <div>
+        <NavBar />
+        <Categories />
+        <FeaturedCard />
+      </div>
+    );
+  }
+>>>>>>> 5c5367bb239731eb9ab67829b1eafe30ce3e9722
 }
 
 export default Home;

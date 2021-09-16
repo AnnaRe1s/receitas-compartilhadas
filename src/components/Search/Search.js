@@ -38,6 +38,7 @@ class Search extends React.Component {
         this.setState({ input: value });
     };
 
+<<<<<<< HEAD
     render() {
         return (
             <div>
@@ -90,6 +91,47 @@ class Search extends React.Component {
                             </Link>
                         );
                     })}
+=======
+  render() {
+    return (
+      <div>
+        <div className="barSearch">
+          <Link to="/">
+            <button className="previus">
+              <i className="fas fa-chevron-left"></i>
+            </button>
+          </Link>
+          <h1>Pesquisa</h1>
+        </div>
+
+        <div className="input-group" style={{ width: "90%", margin: "3% 5%" }}>
+          <input
+            type="text"
+            className="form-control"
+            style={{ backgroundColor: "#e9ecef", border: "none" }}
+            placeholder="Username"
+            onChange={this.handleSearch}
+            value={this.state.input}
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+          <button
+            type="button"
+            className="input-group-text"
+            style={{ border: "none" }}
+            id="basic-addon1"
+          >
+            <i className="fas fa-search"></i>
+          </button>
+        </div>
+        <div>
+          {this.filterFood().map((element) => {
+            return (
+              <Link to={`/receitas/${element._id}`} style={{ textDecoration: "none" }}>
+                <div className="container">
+                  <img src={element.imageUrl} alt={element.name} />
+                  <h4>{element.name}</h4>
+>>>>>>> 5c5367bb239731eb9ab67829b1eafe30ce3e9722
                 </div>
             </div>
         );

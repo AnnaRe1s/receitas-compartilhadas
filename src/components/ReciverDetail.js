@@ -1,69 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import './Styles/FeaturedCard.css';
+import React, { Component } from 'react';
+import Axios from 'axios';
 
-class FeaturedCard extends React.Component {
+class ReciverDetail extends Component {
     state = {
-        recipes: [],
+        name: '',
+        type: '',
+        imageUrl: '',
+        preparation_time: '',
+        portions: '',
+        level: '',
+        ingredients: [],
+        preparationMethod: [],
+        recive: {},
+        ready: false,
     };
-
-    componentDidMount = async () => {
-        this.getObjs();
-    };
-
-    getObjs = async () => {
-        const response = await axios.get(
-            'https://ironrest.herokuapp.com/recipes'
-        );
-
-        // pegando todos os objetos completos
-        const objs = response.data;
-
-        this.setState({ recipes: [...objs] });
+    componentDidMount = () => {
+        Axios.get(
+            `https://ironrest.herokuapp.com/recipes/${this.props.match.params._id}`
+        )
+            .then(response => {
+                this.setState({ ...response.data });
+            })
+            .catch(err => console.log(err));
     };
 
     render() {
+        console.log(this.state.recive);
         return (
-            <div className="feature">
-                <div className="featureTitlesGeneral">
-                    <div className="featureTitles">
-                        <h1>Receitas em destaque</h1>
-                        <p>As receitas mais curtidas da comunidade</p>
+            <div>
+                <div>
+                    <img src={this.state.imageUrl} alt="Comida" />
+                </div>
+                <div>
+                    <div>
+                        <h1>{this.state.name}</h1>
+                    </div>
+                    <div>
+                        <h3>{this.state.preparation_time}</h3>
+                        <h3>{this.state.level}</h3>
+                        <h3>{this.state.portions}</h3>
                     </div>
                 </div>
-                <div className="featureCardGeneral">
-                    {this.state.recipes.map(element => {
-                        return (
-                            <div className="featureCard">
-                                <div>
-                                    <Link to={`/receitas/${element._id}`}>
-                                        <img
-                                            src={element.imageUrl}
-                                            alt={element.name}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="infoNameRecipe">
-                                    <h3>{element.name}</h3>
-                                </div>
-                                <div className="information">
-                                    <div className="infoGeneral">
-                                        <h4>Porções:</h4>
-                                        <h4>{element.portions}</h4>
-                                    </div>
-                                    <div className="infoGeneral">
-                                        <h4>Tempo:</h4>
-                                        <h4>{element.preparation_time}</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
+                <div>
+                    <div>
+                        <h2>ingredientes</h2>
+                        <ul>
+                            {this.state.ingredients.map(element => {
+                                return <li>{element}</li>;
+                            })}
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Modo de preparo</h2>
+                        <ol>
+                            {this.state.preparationMethod.map(metodo => {
+                                return <li>{metodo}</li>;
+                            })}
+                        </ol>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default FeaturedCard;
+export default ReciverDetail;

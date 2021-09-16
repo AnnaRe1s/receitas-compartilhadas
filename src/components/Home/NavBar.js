@@ -25,7 +25,7 @@ class NavBar extends React.Component {
                 <i class="fas fa-search"></i>
               </button>
             </Link>
-            <Link to="addRecipes">
+            <Link to="/addRecipes">
               <button className="buttonAdd"><i className="fas fa-plus"></i> <p>Adicione sua receita</p></button>
             </Link>
           </div>

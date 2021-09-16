@@ -11,6 +11,11 @@ import veggie from "./assests/Veggie/Veggie200.jpg";
 import { Link } from "react-router-dom";
 
 function Categories() {
+
+
+
+
+  
   return (
     <div className="categories">
       <div>
@@ -18,7 +23,7 @@ function Categories() {
       </div>
       <div className="categoryList">
         <div className="card">
-          <Link to="/meat">
+          <Link to={`/category/type`}>
             <img src={meat} alt="acessar categoria carne" />
           </Link>
           <p>Carne</p>
