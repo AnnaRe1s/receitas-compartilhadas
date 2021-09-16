@@ -1,13 +1,13 @@
 // importando componentes
 import NavBar from "./NavBar";
-// import Categories from "./Categories";
+import Categories from "./Categories";
 import FeaturedCard from "./FeaturedCard";
 
 function Home() {
   return (
     <div>
       <NavBar />
-      {/* <Categories /> */}
+      <Categories />
       <FeaturedCard />
     </div>
   );

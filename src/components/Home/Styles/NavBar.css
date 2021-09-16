@@ -15,9 +15,9 @@
   /* background-color: #ffa500; */
   width: 47px;
   height: 47px;
-  position: relative;
-  left: 47%;
-  top: 2%;
+  position:sticky;
+  left: 80%;
+  top: 1.5%;
 }
 
 .buttonAdd {
@@ -39,6 +39,11 @@
 }
 
 @media screen and (min-width: 600px) {
+
+  .containerNav {
+    display: block;
+  }
+  
   .containerNav img {
     width: 150px;
     margin-left: 10%;
@@ -51,8 +56,9 @@
     background-color: white;
     width: 50px;
     height: 50px;
-    left: 57%;
+    left: 75%;
     top: 2%;
+    position: sticky;
   }
 
   .buttonAdd {
@@ -63,7 +69,7 @@
     height: 50px;
     left: 83%;
     top: 2%;
-    /* position: fixed; */
+    position: sticky;
     background-color: white;
     color: #ffa500;
     border: none;
