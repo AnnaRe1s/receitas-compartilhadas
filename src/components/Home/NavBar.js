@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Styles/NavBar.css";
 
 // Imagens
-import logo from "./assests/Logo/Logotipo hungry.png";
+import logo from "./assests/Logo/Logo Oficial200.png";
 
 class NavBar extends React.Component {
   render() {
