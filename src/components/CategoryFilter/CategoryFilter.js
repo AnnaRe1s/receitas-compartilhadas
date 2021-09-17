@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./Style/CategoryFilter.css";
 
-import Nav from "../Home/NavBar"
+import Nav from "../Home/NavBar";
 import Categories from "../Home/Categories";
 import image from "../Home/assests/Logo/NotFound500.png";
 
@@ -38,16 +38,16 @@ class CategoyFilter extends React.Component {
     console.log("props", this.props.location.pathname);
     return (
       <div>
-      <div className="navBrowser">
-        <Nav/>
-      </div>
+        <div className="navBrowser">
+          <Nav />
+        </div>
         <div className="categoryBar">
-        <Link to="/">
+          <Link to="/">
             <button className="previusButton">
               <i className="fas fa-chevron-left"></i>
             </button>
           </Link>
-          <Categories/>
+          <Categories />
         </div>
         <div className="recipesFilter">
           {this.filterFood().length > 0 ? (

@@ -1,6 +1,6 @@
 # Receitas Compartilhadas
 
-<img src="/src/components/Home/assests/Logo/recibes.gif.gif">
+<img src="/src/components/Home/assests/Logo/gifAtualizado.gif">
 
 # Sobre o App
 
