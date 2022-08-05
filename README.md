@@ -19,6 +19,7 @@
 - <img align="center" alt="React" height="30px" width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"/> React (classes)
 - <img align="center" alt="CSS" height="30px" width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/> Css 
 
+para o tradutor de libras foi utilizado a lib do VLibras você pode conferir [aqui!](https://www.gov.br/governodigital/pt-br/vlibras)
 
 
 ## Instalação 
