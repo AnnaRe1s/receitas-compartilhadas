@@ -44,6 +44,6 @@ Em seguida ainda no seu terminal você pode digitar os seguintes comandos
 > Caso não abra o projeto basta ir no seu browser e digitar http://localhost:3000
 
 
-### Para conferir o app deployado só clicar [aqui!](https://hungry-share-your-recipe.netlify.app/receitas)
+### Para conferir o app deployado só clicar [aqui!](https://hungry-share-your-recipe.netlify.app)
 Você pode acessar tanto pelo browser quanto pelo celular
 
